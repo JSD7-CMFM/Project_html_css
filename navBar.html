@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="md:mx-20 sticky top-20">
+                              <!-- Menu button-->
+      <nav class="navbar w-full p-4 bg-base-100 border-2 border-black bg-white md:justify-between justify-between mt-20 md:rounded-xl">
+        <div class="md:hidden navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost  border-slate-400">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Homepage</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>About</a></li>
+            </ul>
+          </div>
+        </div>
+                              <!-- Menu bar -->
+        <div class="flex">
+          <ul class="hidden md:flex">
+            <li><a href="#" class="btn btn-ghost text-xl">New & Featured</a></li>
+            <li><a href="#" class="btn btn-ghost text-xl">SERIES</a></li>
+            <li><a href="#" class="btn btn-ghost text-xl">MEGA</a></li>
+            <li><a href="#" class="btn btn-ghost text-xl">TYPES</a>  </li>
+            <li><a href="#" class="btn btn-ghost text-xl">ACCESSORIES</a>   </li>
+            <li><a href="#" class="btn btn-ghost text-xl">EVENT</a>  </li>
+          </ul>
+        </div>
+                              <!-- logo -->
+        <div class="btn btn-ghost text-4xl text-[#F35D3C] mx-60">Logo</div>
+                              <!-- Search -->
+        <div class="flex-none md:gap-5 md:justify-between md:w-auto md:w-3/4 ">
+          <div class="form-control w-1/2 hidden md:flex">
+            <input type="text" placeholder="Search" class="input input-bordered w-45 md:w-auto" />
+          </div>
+                                <!-- Cart -->
+          <div class="dropdown dropdown-end hidden md:flex">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle mt-2">
+              <div class="indicator">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                <span class="badge badge-sm indicator-item">8</span>
+              </div>
+            </div>
+          <div tabindex="0" class="mt-5 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
+              <div class="card-body">
+                <span class="font-bold text-lg">8 Items</span>
+                <span class="text-info">Subtotal: $999</span>
+                <div class="card-actions">
+                  <button class="btn btn-primary btn-block">View cart</button>
+                </div>
+              </div>
+          </div>
+          </div>
+                                <!-- heart -->
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle hidden md:flex">
+            <div class="indicator w-11 h-11 ml-1">
+                <img alt="Tailwind CSS Navbar component" src="./images/heart.svg"  class="mt-2"/>
+            </div>
+          </div>
+                                  <!-- Login -->
+          <div class="dropdown dropdown-end ">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar border-black">
+              <div class="w-10 rounded-full">
+                <img alt="Tailwind CSS Navbar component" src="./images/ic-login.svg"  class="mt-2"/>
+              </div>
+            </div>
+              <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li>
+                  <a class="justify-between">
+                    Sign in / Register
+                  </a>
+              </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="w-screen bg-white flex justify-center">
+      <div class="w-full px-20 md:px-80">
+        <div>
+          <div class="bg-gray-500 flex">
+            <div class="w-6/12 bg-gray-600 border">main</div>
+            <div class="w-6/12 bg-gray-600 border">main</div>
+          </div>
+          <div class="bg-gray-500">main</div>
+        </div>
+      </div>
+    </main>
+
+    <section class="p-4 bg-gray-400 text-white">footer</section>
+  </body>
+</html>
