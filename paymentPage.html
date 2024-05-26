@@ -1,110 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 py-10">
-    <div class="max-w-2xl mx-auto bg-white p-8 shadow-md rounded-lg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Payment Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 py-10">
+    <div class="max-w-6xl mx-auto px-4 md:flex md:space-x-8">
+      <!-- Order Summary -->
+      <div
+        class="max-w-2xl mx-auto bg-white p-8 mt-8 shadow-md rounded-lg md:mt-0 md:flex-1 h-auto md:h-full md:sticky top-0"
+      >
+        <h2 class="font-semibold mb-4">Order Summary</h2>
+        <div class="flex items-center mb-4">
+          <img
+            src="path/to/product1.png"
+            alt="Product 1"
+            class="w-12 h-12 rounded mr-4"
+          />
+          <div class="flex-1">
+            <h3 class="font-semibold">Normal Feminine Wipes</h3>
+            <p class="text-gray-600 text-sm">Regular 30 ct</p>
+          </div>
+          <p class="text-gray-800">$10.99</p>
+        </div>
+        <div class="flex items-center mb-4">
+          <img
+            src="path/to/product2.png"
+            alt="Product 2"
+            class="w-12 h-12 rounded mr-4"
+          />
+          <div class="flex-1">
+            <h3 class="font-semibold">Route Package Protection</h3>
+          </div>
+          <p class="text-gray-800">$1.55</p>
+        </div>
+        <div class="border-t border-gray-300 pt-4">
+          <p class="text-sm text-gray-600 mb-4">
+            <i class="fas fa-info-circle mr-1"></i>
+            Don't miss out! <a href="#" class="text-blue-600">Log in</a> to earn
+            and redeem rewards
+          </p>
+          <div class="flex mb-4">
+            <input
+              type="text"
+              placeholder="Discount code or gift card"
+              class="w-full border border-gray-300 px-4 py-2 rounded-l"
+            />
+            <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded-r">
+              Apply
+            </button>
+          </div>
+          <div class="flex justify-between text-gray-800 mb-2">
+            <p>Subtotal</p>
+            <p>$12.54</p>
+          </div>
+          <div class="flex justify-between text-gray-800 mb-4">
+            <p>Shipping</p>
+            <p>Enter shipping address</p>
+          </div>
+          <div class="flex justify-between text-lg font-semibold text-gray-900">
+            <p>Total</p>
+            <p>USD $12.54</p>
+          </div>
+        </div>
+      </div>
+      <!-- Checkout -->
+      <div
+        class="max-w-2xl mx-auto bg-white p-8 shadow-md rounded-lg md:flex-1"
+      >
         <!-- Express Checkout -->
         <div class="flex justify-between mb-4">
-            <button class="bg-purple-600 text-white px-4 py-2 rounded">shop <span class="font-bold">Pay</span></button>
-            <button class="bg-yellow-400 text-black px-4 py-2 rounded">PayPal</button>
+          <button class="bg-purple-600 text-white px-4 py-2 rounded flex-1 mr-2">
+            shop <span class="font-bold">Pay</span>
+          </button>
+          <button class="bg-yellow-400 text-black px-4 py-2 rounded flex-1 ml-2 ">
+            PayPal
+          </button>
         </div>
-        
+
         <div class="text-center mb-4">
-            <span class="text-gray-500">OR</span>
+          <span class="text-gray-500">OR</span>
         </div>
-        
+
         <!-- Contact -->
         <div class="mb-6">
-            <h2 class="font-semibold mb-2">Contact</h2>
-            <input type="email" placeholder="Email" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
-            <div class="flex items-center mb-2">
-                <input type="checkbox" id="newsOffers" class="mr-2">
-                <label for="newsOffers" class="text-sm text-gray-600">Email me with news and offers</label>
-            </div>
+          <h2 class="font-semibold mb-2">Contact</h2>
+          <input
+            type="email"
+            placeholder="Email"
+            class="w-full border border-gray-300 px-4 py-2 mb-2 rounded"
+          />
+          <div class="flex items-center mb-2">
+            <input type="checkbox" id="newsOffers" class="mr-2" />
+            <label for="newsOffers" class="text-sm text-gray-600"
+              >Email me with news and offers</label
+            >
+          </div>
         </div>
-        
+
         <!-- Delivery -->
         <div class="mb-6">
-            <h2 class="font-semibold mb-2">Delivery</h2>
-            <select class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
-                <option>Country/Region</option>
+          <h2 class="font-semibold mb-2">Delivery</h2>
+          <select class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
+            <option>Country/Region</option>
+          </select>
+          <div class="flex mb-2">
+            <input
+              type="text"
+              placeholder="First name"
+              class="w-1/2 border border-gray-300 px-4 py-2 mr-2 rounded"
+            />
+            <input
+              type="text"
+              placeholder="Last name"
+              class="w-1/2 border border-gray-300 px-4 py-2 rounded"
+            />
+          </div>
+          <input
+            type="text"
+            placeholder="Company (optional)"
+            class="w-full border border-gray-300 px-4 py-2 mb-2 rounded"
+          />
+          <input
+            type="text"
+            placeholder="Address"
+            class="w-full border border-gray-300 px-4 py-2 mb-2 rounded"
+          />
+          <input
+            type="text"
+            placeholder="Apartment, suite, etc. (optional)"
+            class="w-full border border-gray-300 px-4 py-2 mb-2 rounded"
+          />
+          <div class="flex mb-2">
+            <input
+              type="text"
+              placeholder="City"
+              class="w-1/2 border border-gray-300 px-4 py-2 mr-2 rounded"
+            />
+            <select class="w-1/4 border border-gray-300 px-4 py-2 mr-2 rounded">
+              <option>State</option>
             </select>
-            <div class="flex mb-2">
-                <input type="text" placeholder="First name" class="w-1/2 border border-gray-300 px-4 py-2 mr-2 rounded">
-                <input type="text" placeholder="Last name" class="w-1/2 border border-gray-300 px-4 py-2 rounded">
-            </div>
-            <input type="text" placeholder="Company (optional)" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
-            <input type="text" placeholder="Address" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
-            <input type="text" placeholder="Apartment, suite, etc. (optional)" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
-            <div class="flex mb-2">
-                <input type="text" placeholder="City" class="w-1/2 border border-gray-300 px-4 py-2 mr-2 rounded">
-                <select class="w-1/4 border border-gray-300 px-4 py-2 mr-2 rounded">
-                    <option>State</option>
-                </select>
-                <input type="text" placeholder="ZIP code" class="w-1/4 border border-gray-300 px-4 py-2 rounded">
-            </div>
-            <input type="text" placeholder="Phone" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
+            <input
+              type="text"
+              placeholder="ZIP code"
+              class="w-1/4 border border-gray-300 px-4 py-2 rounded"
+            />
+          </div>
+          <input
+            type="text"
+            placeholder="Phone"
+            class="w-full border border-gray-300 px-4 py-2 mb-2 rounded"
+          />
         </div>
-        
+
         <!-- Payment -->
         <div class="mb-6">
-            <h2 class="font-semibold mb-2">Payment</h2>
-            <div class="flex items-center mb-2">
-                <input type="radio" name="paymentMethod" id="creditCard" class="mr-2" checked>
-                <label for="creditCard" class="text-sm text-gray-600">Credit card</label>
-            </div>
-            <input type="text" placeholder="Card number" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
-            <div class="flex mb-2">
-                <input type="text" placeholder="Expiration date (MM / YY)" class="w-1/2 border border-gray-300 px-4 py-2 mr-2 rounded">
-                <input type="text" placeholder="Security code" class="w-1/2 border border-gray-300 px-4 py-2 rounded">
-            </div>
-            <input type="text" placeholder="Name on card" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
-            <div class="flex items-center mb-4">
-                <input type="checkbox" id="sameAddress" class="mr-2">
-                <label for="sameAddress" class="text-sm text-gray-600">Use shipping address as billing address</label>
-            </div>
-            
-            <!-- Billing Address -->
-            <h2 class="font-semibold mb-2">Billing address</h2>
-            <select class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
-                <option>Country/Region</option>
+          <h2 class="font-semibold mb-2">Payment</h2>
+          <div class="flex items-center mb-2">
+            <input
+              type="radio"
+              name="paymentMethod"
+              id="creditCard"
+              class="mr-2"
+              checked
+            />
+            <label for="creditCard" class="text-sm text-gray-600"
+              >Credit card</label
+            >
+          </div>
+          <input
+            type="text"
+            placeholder="Card number"
+            class="w-full border border-gray-300 px-4 py-2 mb-2 rounded"
+          />
+          <div class="flex mb-2">
+            <input
+              type="text"
+              placeholder="Expiration date (MM / YY)"
+              class="w-1/2 border border-gray-300 px-4 py-2 mr-2 rounded"
+            />
+            <input
+              type="text"
+              placeholder="Security code"
+              class="w-1/2 border border-gray-300 px-4 py-2 rounded"
+            />
+          </div>
+          <input
+            type="text"
+            placeholder="Name on card"
+            class="w-full border border-gray-300 px-4 py-2 mb-2 rounded"
+          />
+          <div class="flex items-center mb-4">
+            <input type="checkbox" id="sameAddress" class="mr-2" />
+            <label for="sameAddress" class="text-sm text-gray-600"
+              >Use shipping address as billing address</label
+            >
+          </div>
+
+          <!-- Billing Address -->
+          <h2 class="font-semibold mb-2">Billing address</h2>
+          <select class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
+            <option>Country/Region</option>
+          </select>
+          <div class="flex mb-2">
+            <input
+              type="text"
+              placeholder="First name"
+              class="w-1/2 border border-gray-300 px-4 py-2 mr-2 rounded"
+            />
+            <input
+              type="text"
+              placeholder="Last name"
+              class="w-1/2 border border-gray-300 px-4 py-2 rounded"
+            />
+          </div>
+          <input
+            type="text"
+            placeholder="Company (optional)"
+            class="w-full border border-gray-300 px-4 py-2 mb-2 rounded"
+          />
+          <input
+            type="text"
+            placeholder="Address"
+            class="w-full border border-gray-300 px-4 py-2 mb-2 rounded"
+          />
+          <input
+            type="text"
+            placeholder="Apartment, suite, etc. (optional)"
+            class="w-full border border-gray-300 px-4 py-2 mb-2 rounded"
+          />
+          <div class="flex mb-2">
+            <input
+              type="text"
+              placeholder="City"
+              class="w-1/2 border border-gray-300 px-4 py-2 mr-2 rounded"
+            />
+            <select class="w-1/4 border border-gray-300 px-4 py-2 mr-2 rounded">
+              <option>State</option>
             </select>
-            <div class="flex mb-2">
-                <input type="text" placeholder="First name" class="w-1/2 border border-gray-300 px-4 py-2 mr-2 rounded">
-                <input type="text" placeholder="Last name" class="w-1/2 border border-gray-300 px-4 py-2 rounded">
-            </div>
-            <input type="text" placeholder="Company (optional)" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
-            <input type="text" placeholder="Address" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
-            <input type="text" placeholder="Apartment, suite, etc. (optional)" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
-            <div class="flex mb-2">
-                <input type="text" placeholder="City" class="w-1/2 border border-gray-300 px-4 py-2 mr-2 rounded">
-                <select class="w-1/4 border border-gray-300 px-4 py-2 mr-2 rounded">
-                    <option>State</option>
-                </select>
-                <input type="text" placeholder="ZIP code" class="w-1/4 border border-gray-300 px-4 py-2 rounded">
-            </div>
-            <input type="text" placeholder="Phone" class="w-full border border-gray-300 px-4 py-2 mb-2 rounded">
-            
-            <!-- PayPal -->
-            <div class="flex items-center mb-4">
-                <input type="radio" name="paymentMethod" id="paypal" class="mr-2">
-                <label for="paypal" class="text-sm text-gray-600">PayPal</label>
-            </div>
+            <input
+              type="text"
+              placeholder="ZIP code"
+              class="w-1/4 border border-gray-300 px-4 py-2 rounded"
+            />
+          </div>
+          <input
+            type="text"
+            placeholder="Phone"
+            class="w-full border border-gray-300 px-4 py-2 mb-2 rounded"
+          />
+
+          <!-- PayPal -->
+          <div class="flex items-center mb-4">
+            <input type="radio" name="paymentMethod" id="paypal" class="mr-2" />
+            <label for="paypal" class="text-sm text-gray-600">PayPal</label>
+          </div>
         </div>
-        
+
         <!-- Remember me -->
         <div class="flex items-center mb-4">
-            <input type="checkbox" id="rememberMe" class="mr-2">
-            <label for="rememberMe" class="text-sm text-gray-600">Save my information for a faster checkout</label>
+          <input type="checkbox" id="rememberMe" class="mr-2" />
+          <label for="rememberMe" class="text-sm text-gray-600"
+            >Save my information for a faster checkout</label
+          >
         </div>
-        
+
         <!-- Pay now button -->
-        <button class="w-full bg-blue-600 text-white px-4 py-2 rounded">Pay now</button>
+        <button class="w-full bg-blue-600 text-white px-4 py-2 rounded">
+          Pay now
+        </button>
+      </div>
     </div>
-</body>
+  </body>
 </html>
