@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignInSignUp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <section id="authen" class="h-screen bg-[#F0EB76] pt-5 px-4 flex flex-col justify-center">
+        <div id="welcome-back" class="flex flex-col md:items-center">
+            <h2 class="text-center text-4xl md:text-2xl">Welcome Back</h2>
+            <form class="pt-12 flex flex-col md:w-[473px]">
+                <input type="email" placeholder="Email address*" class="mt-5 p-1 pl-4 rounded border border-gray-300">
+                <input type="password" placeholder="Password*" class="mt-5 p-1 pl-4 rounded border border-gray-300">
+                <a href="" onclick="showSection('forget')" class="underline text-[12px] text-right pt-1">Forgot
+                    Password?</a>
+                <div class="mt-14 text-center">
+                    <a href=""
+                        class="py-[8px] px-6 bg-white hover:border-black rounded-lg border border-gray-300 mr-5">LOGIN</a>
+                    <a href="" onclick="showSection('sign-up')"
+                        class="py-[8px] px-6 bg-white hover:border-black rounded-lg border border-gray-300">SIGN UP</a>
+                </div>
+            </form>
+        </div>
+        <div id="sign-up" class="hidden flex-col md:items-center">
+            <h2 class="text-center text-4xl md:text-2xl">You're new around here</h2>
+            <form class="pt-12 flex flex-col md:w-[473px] md:pt-6">
+                <input type="text" placeholder="First name*" class="mt-5 p-1 pl-4 rounded border border-gray-300">
+                <input type="text" placeholder="Last name*" class="mt-5 p-1 pl-4 rounded border border-gray-300">
+                <input type="email" placeholder="Email address*" class="mt-5 p-1 pl-4 rounded border border-gray-300">
+                <input type="password" placeholder="Password*" class="mt-5 p-1 pl-4 rounded border border-gray-300">
+                <div class="mt-14 text-center">
+                    <a href="javascript:void(0)"
+                        class="py-[8px] px-6 bg-white hover:border-black rounded-lg border border-gray-300 mr-5">SIGN
+                        UP</a>
+                    <a href="" onclick="showSection('welcome-back')"
+                        class="py-[8px] px-6 bg-white hover:border-black rounded-lg border border-gray-300">LOGIN</a>
+                </div>
+            </form>
+        </div>
+        <div id="forget" class="hidden flex-col md:items-center">
+            <h2 class="text-center text-4xl pb-4">Password reset</h2>
+            <p class="text-center">We will send you an email to reset your password</p>
+            <form class="pt-12 flex flex-col md:w-[473px]">
+                <input type="email" placeholder="Email address*" class="mt-5 p-1 pl-4 rounded border border-gray-300">
+                <div class="mt-14 text-center">
+                    <a href="javascript:void(0)"
+                        class="py-[8px] px-6 bg-white hover:border-black rounded-lg border border-gray-300">SUBMIT</a>
+                </div>
+                <a href="" onclick="showSection('welcome-back')"
+                    class="underline text-[12px] text-center pt-4">Cancel</a>
+            </form>
+        </div>
+    </section>
+    <script>
+        function showSection(sectionId) {
+            event.preventDefault();
+            document.getElementById('welcome-back').classList.add('hidden');
+            document.getElementById('sign-up').classList.add('hidden');
+            document.getElementById('forget').classList.add('hidden');
+
+            const section = document.getElementById(sectionId);
+            section.classList.remove('hidden');
+            section.classList.add('flex');
+        };
+    </script>
+</body>
+
+</html>
