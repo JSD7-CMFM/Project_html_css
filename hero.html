@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #moving-section {
+            animation: rightToLeft 30s linear infinite;
+        }
+
+        @keyframes rightToLeft {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="hero">
+        <div id="main-container" class="md:flex md:flex-row-reverse">
+            <div id="text-section"
+                class="px-4 py-12 flex flex-col items-center justify-center md:w-1/2 md:px-[98px] md:py-[120px] md:items-start"
+                style="background-color: #b5e3d8; color: #252222">
+                <h2 class="text-[36px]">Header</h2>
+                <p class="text-center mt-4 md:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+                    esse labore</p>
+                <p class="text-center md:text-left">Lorem ipsum dolor sit amet </p>
+                <a href=""
+                    class="py-[10px] px-6 mt-5 bg-white hover:bg-[#F0EB76] rounded-lg border border-black">Button</a>
+            </div>
+            <div id="picture-section" class="md:w-1/2 border-r border-black h-[55vh] md:h-auto">
+                <picture>
+                    <img src="images/hero_mock.png" class="hidden md:block h-full w-full object-cover">
+                    <img src="images/hero_mock_mobile.png"
+                        class="block md:hidden object-cover object-top h-full w-full overflow-hidden">
+                </picture>
+            </div>
+        </div>
+        <div id="moving-container" class="bg-[#f0eb76] overflow-hidden border-black border">
+            <div id="moving-section" class="flex justify-start">
+                <div class="flex">
+                    <p class="py-[10px] px-[12.5px] whitespace-nowrap md:pt-[17px] md:pb-5 md:px-12 md:text-[20px]">
+                        Something moving</p>
+                    <p class="py-[10px] px-[12.5px] whitespace-nowrap md:pt-[17px] md:pb-5 md:px-12 md:text-[20px]">
+                        Something moving</p>
+                    <p class="py-[10px] px-[12.5px] whitespace-nowrap md:pt-[17px] md:pb-5 md:px-12 md:text-[20px]">
+                        Something moving</p>
+                    <p class="py-[10px] px-[12.5px] whitespace-nowrap md:pt-[17px] md:pb-5 md:px-12 md:text-[20px]">
+                        Something moving</p>
+                </div>
+                <div class="flex">
+                    <p class="py-[10px] px-[12.5px] whitespace-nowrap md:pt-[17px] md:pb-5 md:px-12 md:text-[20px]">
+                        Something moving</p>
+                    <p class="py-[10px] px-[12.5px] whitespace-nowrap md:pt-[17px] md:pb-5 md:px-12 md:text-[20px]">
+                        Something moving</p>
+                    <p class="py-[10px] px-[12.5px] whitespace-nowrap md:pt-[17px] md:pb-5 md:px-12 md:text-[20px]">
+                        Something moving</p>
+                    <p class="py-[10px] px-[12.5px] whitespace-nowrap md:pt-[17px] md:pb-5 md:px-12 md:text-[20px]">
+                        Something moving</p>
+                </div>
+            </div>
+    </section>
+</body>
+
+</html>
